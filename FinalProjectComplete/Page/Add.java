@@ -31,8 +31,6 @@ public class Add extends JPanel{
         amount.setBounds(30, 350, 300, 100);
         add(amount);
         
-        b1.addActionListener(e -> controller.showPage("Home")); 
-        
         JComboBox<String> c = province_to_combobox(); 
         c.setBounds(57, 500, 250, 50); 
         add(c); 
@@ -42,7 +40,12 @@ public class Add extends JPanel{
         b2.setBounds(100, 600, 150, 60); 
         b2.setForeground(Color.BLACK); 
         add(b2); 
-    } 
+        
+        // Action
+        b1.addActionListener(e -> controller.showPage("Home")); 
+    }
+    
+    // Test
     JComboBox<String> province_to_combobox(){
         JComboBox<String> tmp = new JComboBox<>();
         File f = null;
@@ -70,6 +73,8 @@ public class Add extends JPanel{
         }
         return tmp;
     }
+
+    // Background Color
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

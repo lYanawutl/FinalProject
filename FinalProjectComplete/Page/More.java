@@ -34,10 +34,13 @@ public class More extends JPanel {
         add(exbt);
 
         // Action
+        sumbt.setToolTipText("Summary");
+        setbt.setToolTipText("Setting");
+        exbt.setToolTipText("Export");
+
         l1.addActionListener(e -> controller.showPage("Home"));
         sumbt.addActionListener(e -> controller.showPage("Summary"));
         setbt.addActionListener(e -> controller.showPage("Setting"));
-        exbt.addActionListener(e -> controller.showPage("Export"));
     }
 
     @Override

@@ -20,7 +20,6 @@ public class Main extends JFrame {
 
         // Page
         mainPanel.add(new Welcome(controller), "Welcome");
-        mainPanel.add(new Path(controller), "Path");
         mainPanel.add(new Home(controller), "Home");
         mainPanel.add(new More(controller), "More");
         mainPanel.add(new Add(controller), "Add");

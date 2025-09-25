@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
+import javax.swing.border.*;
 
 public class LabeledInputCard extends JPanel {
     private final Color bg = new Color(0xE9,0xE9,0xEE);
@@ -26,7 +26,7 @@ public class LabeledInputCard extends JPanel {
         label.setForeground(textColor);
 
         field = new Placeholder(placeholder);
-        field.setFont(new Font("Segoe UI", Font.PLAIN, 26));
+        field.setFont(new Font("Segoe UI", Font.PLAIN, 15));
         field.setForeground(textColor);
         field.setOpaque(false);
         field.setBorder(new EmptyBorder(8,0,8,0));
