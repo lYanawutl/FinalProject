@@ -11,9 +11,23 @@ public class Budget extends JPanel{
     public Budget(AppController controller){
         setLayout( null);
 
+        JButton b1 = new JButton("← Back"); 
+        b1.setFont(new Font("Segoe UI", Font.BOLD, 16)); 
+        b1.setBounds(0, 0, 100, 30); 
+        b1.setForeground(Color.BLACK); 
+        add(b1);
+        
         LabeledInputCard description = new LabeledInputCard("Budget", "Set Budget");
         description.setBounds(30, 200, 300, 100);
         add(description);
+
+        JButton b2 = new JButton(" Comfirm ");
+        b2.setFont(new Font("Segoe UI", Font.BOLD, 16)); 
+        b2.setBounds(100, 400, 150, 60); 
+        b2.setForeground(Color.BLACK); 
+        add(b2); 
+
+        b1.addActionListener(e -> controller.showPage("Home"));
     }
     @Override
     protected void paintComponent(Graphics g) {

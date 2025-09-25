@@ -30,28 +30,19 @@ public class RoundedButton extends JButton {
         int w = getWidth();
         int h = getHeight();
 
-        // shadow
         g2.setComposite(AlphaComposite.SrcOver.derive(0.15f));
         g2.setColor(Color.BLACK);
         g2.fillRoundRect(4, 6, w - 8, h - 8, radius, radius);
 
-        // background
         g2.setComposite(AlphaComposite.SrcOver);
         g2.setColor(getBackground());
         g2.fillRoundRect(0, 0, w - 1, h - 1, radius, radius);
 
-        // border
         g2.setColor(borderColor);
         g2.setStroke(new BasicStroke(borderThickness));
         g2.drawRoundRect(0, 0, w - 1, h - 1, radius, radius);
 
         g2.dispose();
         super.paintComponent(g);
-    }
-
-    @Override
-    public boolean isContentAreaFilled() {
-        // เราวาดเองแล้ว
-        return false;
     }
 }
