@@ -58,7 +58,7 @@ public class Home extends JPanel {
         listContent.setBackground(new Color(255, 255, 255));
         for (int i = 1; i <= 10; i++) {
             JLabel itemLabel = new JLabel("Item " + i);
-            itemLabel.setFont(new Font("Segoe UI", Font.PLAIN, 20)); // ขยายขนาดข้อความ
+            itemLabel.setFont(new Font("Segoe UI", Font.PLAIN, 20));
             listContent.add(itemLabel);
         }
 
@@ -68,6 +68,7 @@ public class Home extends JPanel {
 
         add(contentPanel, BorderLayout.CENTER);
 
+        //Navbar
         JPanel navBar = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 20));
         navBar.setOpaque(false); 
 
@@ -75,7 +76,7 @@ public class Home extends JPanel {
         homebt.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 23));
         homebt.setPreferredSize(new Dimension(50,50));
 
-        CircleButton morebt = new CircleButton("⚙");
+        CircleButton morebt = new CircleButton("...");
         morebt.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 23));
         morebt.setPreferredSize(new Dimension(50,50));
 
@@ -88,6 +89,15 @@ public class Home extends JPanel {
         navBar.add(morebt);
         
         add(navBar, BorderLayout.SOUTH);
+
+        //Action
+        homebt.setToolTipText("Home");
+        addbt.setToolTipText("Add");
+        morebt.setToolTipText("More");
+        
+        homebt.addActionListener(e -> controller.showPage("Home"));
+        addbt.addActionListener(e -> controller.showPage("Add"));
+        morebt.addActionListener(e -> controller.showPage("More"));
 
     }
 

@@ -75,14 +75,11 @@ public class Welcome extends JPanel {
         int w = getWidth();
         int h = getHeight();
 
-        // ไล่เฉียงจากบนซ้าย -> ล่างขวา
         Point2D start = new Point2D.Float(0, 0);
         Point2D end   = new Point2D.Float(w, h);
 
-        // ตำแหน่ง gradient (0 = เริ่ม, 1 = สิ้นสุด)
         float[] dist = {0.0f, 0.5f, 1.0f};
 
-        // สีโทนแบบ K+
         Color[] colors = {
             new Color(0x4A5C58),
             new Color(0x0A5C36),
